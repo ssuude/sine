@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" BackgroundColor="#205375" 
+             NavigationPage.HasNavigationBar="False"
+             x:Class="MyCinemaAppp.GüncellemeSayfasi">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *" Padding="30" RowSpacing="40">
+            <StackLayout>
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection Title="Film Güncelle">
+                            <EntryCell LabelColor="White" Label="Film Id" x:Name="txtFilmId"/>
+                            <EntryCell LabelColor="White" Label="Film Adi" x:Name="txtFilmAd" Text="Aquamarine"/>
+                            <EntryCell LabelColor="White" Label="Bos Koltuklar" x:Name="txtBosKoltuk"/>
+                            <EntryCell LabelColor="White" Label="FilmResim" x:Name="txtFilmResim"/>
+                            <EntryCell LabelColor="White" Label="Gösterim Tarihi (dd/mm/yy)" x:Name="txtGösterimTarih"/>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Button Text="AramaYap" Clicked="BulYap" />
+                                    <Button Text="Güncelle" Clicked="GüncelleYap" />
+                                    <Button Text="Sil" Clicked="SilYap" />
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
